@@ -40,7 +40,7 @@ def check_password_strength(password):
     if re.search(r"[!@#$%^&*]", password):
         score +=1
     else:
-        feedback.append("❌ Include **at least one special character (!@#$%^&*)**. ")
+        feedback.append("❌ Include **at least one special character (!@#$%^&*)**.")
 
     #disply result
     if score == 4:
@@ -52,7 +52,7 @@ def check_password_strength(password):
 
     #feedback
     if feedback:
-        with st.expander("🔎 **Improve your password** ."):
+        with st.expander("🔎 **Improve your password** "):
             for item in feedback:
                 st.write(item)
     password = st.text_input("Enter your password:", type="password", help="Ensure your password is strong 🔐")
